@@ -55,6 +55,13 @@ button:hover {
 
 }
 
+button:active{
+
+    transform: scale(0.95);
+    background-color: navy;
+
+}
+
 h3 {
 
     font-size: 18px;
