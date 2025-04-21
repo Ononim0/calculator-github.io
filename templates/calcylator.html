@@ -23,7 +23,6 @@
             let func = 0
             let keyboard = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
-
             keyboard.forEach(key => {
                 document.getElementById(key).addEventListener("click", function() {
                     strnumber += key;
@@ -33,47 +32,9 @@
 
             document.getElementById(".").addEventListener("click", function() {
                 if (!strnumber.includes(".")){
-                    strnumber += "."
+                    strnumber += ".";
                     document.getElementById("label").innerText = strnumber;
-
-                    }
-                }
-               
-            });
-
-            document.getElementById("=").addEventListener("click", function() {
-                switch (func){
-                    
-                    case 1:
-                        strnumber = (number1 + parseFloat(strnumber)).toString()
-                        number1 = 0
-                        func = 0
-                        document.getElementById("label").innerText = strnumber;
-                        break
-                    
-                    case 2:
-                        strnumber = (number1 - parseFloat(strnumber)).toString()
-                        number1 = 0
-                        func = 0
-                        document.getElementById("label").innerText = strnumber;
-                        break
-
-                    case 3:
-                        strnumber = (number1 / parseFloat(strnumber)).toString()
-                        number1 = 0
-                        func = 0
-                        document.getElementById("label").innerText = strnumber;
-                        break
-
-                    case 4:
-                        strnumber = (number1 * parseFloat(strnumber)).toString()
-                        number1 = 0
-                        func = 0
-                        document.getElementById("label").innerText = strnumber;
-                        break
-
-                }
-                
+                }  
             });
 
             document.getElementById("+").addEventListener("click", function() {
@@ -108,14 +69,6 @@
                 strnumber = ""               
             });
 
-            document.getElementById("C").addEventListener("click", function() {
-                strnumber = "0"
-                number1 = 0
-                func = 0
-                document.getElementById("label").innerText = strnumber;
-                strnumber = ""
-            });
-
             document.getElementById("<=").addEventListener("click", function() {
                 strnumber = strnumber.slice(0, -1)
                 if (strnumber.length == 0){
@@ -125,10 +78,52 @@
                 }else{
                     document.getElementById("label").innerText = strnumber;
                 }
-               
+                
+                
             });
- 
- 
+
+            document.getElementById("C").addEventListener("click", function() {
+                strnumber = "0"
+                number1 = 0
+                func = 0
+                document.getElementById("label").innerText = strnumber;
+                strnumber = ""
+            });
+
+
+            document.getElementById("=").addEventListener("click", function() {
+                switch (func){
+                    
+                    case 1:
+                        strnumber = (number1 + parseFloat(strnumber)).toString()
+                        number1 = 0
+                        func = 0
+                        document.getElementById("label").innerText = strnumber;
+                        break
+                    
+                    case 2:
+                        strnumber = (number1 - parseFloat(strnumber)).toString()
+                        number1 = 0
+                        func = 0
+                        document.getElementById("label").innerText = strnumber;
+                        break
+
+                    case 3:
+                        strnumber = (number1 / parseFloat(strnumber)).toString()
+                        number1 = 0
+                        func = 0
+                        document.getElementById("label").innerText = strnumber;
+                        break
+
+                    case 4:
+                        strnumber = (number1 * parseFloat(strnumber)).toString()
+                        number1 = 0
+                        func = 0
+                        document.getElementById("label").innerText = strnumber;
+                        break
+                }
+                
+            });
         </script>
     </body>
 </html>
