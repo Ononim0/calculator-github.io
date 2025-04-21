@@ -33,8 +33,13 @@
 
             document.getElementById(".").addEventListener("click", function() {
                 if (!strnumber.includes(".")){
-                    strnumber += ".";
-                    document.getElementById("label").innerText = strnumber;
+                    if (strnumber.length == 0){
+                        strnumber = "0"
+                        document.getElementById("label").innerText = strnumber;
+                        strnumber = ""
+                    }else{
+                        document.getElementById("label").innerText = strnumber;
+                    }
                 }
                
             });
