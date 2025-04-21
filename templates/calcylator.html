@@ -21,57 +21,15 @@
             let number1 = 0
             let strnumber = ""
             let func = 0
-    
+            let keyboard = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
-            document.getElementById("1").addEventListener("click", function() {
-                strnumber += "1";
-                document.getElementById("label").innerText = strnumber;
-            });
 
-            document.getElementById("2").addEventListener("click", function() {
-                strnumber += "2";
-                document.getElementById("label").innerText = strnumber;
-            });
-
-            document.getElementById("3").addEventListener("click", function() {
-                strnumber += "3";
-                document.getElementById("label").innerText = strnumber;
-            });
-
-            document.getElementById("4").addEventListener("click", function() {
-                strnumber += "4";
-                document.getElementById("label").innerText = strnumber;
-            });
-
-            document.getElementById("5").addEventListener("click", function() {
-                strnumber += "5"
-                document.getElementById("label").innerText = strnumber;
-            });
-
-            document.getElementById("6").addEventListener("click", function() {
-                strnumber += "6";
-                document.getElementById("label").innerText = strnumber;
-            });
-
-            document.getElementById("7").addEventListener("click", function() {
-                strnumber += "7";
-                document.getElementById("label").innerText = strnumber;
-            });
-
-            document.getElementById("8").addEventListener("click", function() {
-                strnumber += "8";
-                document.getElementById("label").innerText = strnumber;
-            });
-
-            document.getElementById("9").addEventListener("click", function() {
-                strnumber += "9";
-                document.getElementById("label").innerText = strnumber;
-            });
- 
-            document.getElementById("0").addEventListener("click", function() {
-                strnumber += "0";
-                document.getElementById("label").innerText = strnumber;
-            });
+            keyboard.forEach(key => {
+                document.getElementById(key).addEventListener("click", function() {
+                    strnumber += key;
+                    document.getElementById("label").innerText = strnumber;
+                });
+            })
 
             document.getElementById(".").addEventListener("click", function() {
                 if (!strnumber.includes(".")){
