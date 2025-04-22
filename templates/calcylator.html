@@ -32,8 +32,14 @@
 
             document.getElementById(".").addEventListener("click", function() {
                 if (!strnumber.includes(".")){
+                    if (strnumber.length == 0){
+                        strnumber += "0.";
+                        document.getElementById("label").innerText = strnumber;
+                    }else{
                     strnumber += ".";
-                    document.getElementById("label").innerText = strnumber;
+                    document.getElementById("label").innerText = strnumber;                        
+                    }
+
                 }  
             });
 
